@@ -84,8 +84,8 @@ fs:
       path: xxxxxxxxxxxxxxxxxxx
     #oss配置
     oss:
-      accessKey: LTAI4GGed8CjoybQXkRz95Ei
-      secretKey: EstEtfHB6casSKi82gXHdUQ4EzdE0g
+      accessKey: xxxxxxxxxxxxxxxxxxx
+      secretKey: xxxxxxxxxxxxxxxxxxx
       endpoint: oss-cn-chengdu.aliyuncs.com
       bucket: supercharge-free-fs
       path: https://supercharge-free-fs.oss-cn-chengdu.aliyuncs.com
