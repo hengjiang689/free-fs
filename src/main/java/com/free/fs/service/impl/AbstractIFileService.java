@@ -41,7 +41,9 @@ public abstract class AbstractIFileService extends ServiceImpl<FileMapper, FileP
             }
         }
         wrapper.orderByDesc(FilePojo::getIsDir, FilePojo::getPutTime);
-        return baseMapper.selectList(wrapper);
+        List<FilePojo> filePojoList = baseMapper.selectList(wrapper);
+
+        return filePojoList;
     }
 
     @SuppressWarnings("unchecked")

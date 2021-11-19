@@ -71,7 +71,7 @@ fs:
 
   # 云存储配置
   files-server:
-    type: local
+    type: oss
     local:
       uploadPath: D:/data/upload  #windows
       #upload-path: /home/data/upload   #linux
@@ -84,8 +84,8 @@ fs:
       path: xxxxxxxxxxxxxxxxxxx
     #oss配置
     oss:
-      accessKey: xxxxxxxxxxxxxxxxxxx
-      secretKey: xxxxxxxxxxxxxxxxxxx
-      endpoint: xxxxxxxxxxxxxxxxxxx
-      bucket: xxxxxxxxxxxxxxxxxxx
-      path: xxxxxxxxxxxxxxxxxxx
+      accessKey: LTAI4GGed8CjoybQXkRz95Ei
+      secretKey: EstEtfHB6casSKi82gXHdUQ4EzdE0g
+      endpoint: oss-cn-chengdu.aliyuncs.com
+      bucket: supercharge-free-fs
+      path: https://supercharge-free-fs.oss-cn-chengdu.aliyuncs.com

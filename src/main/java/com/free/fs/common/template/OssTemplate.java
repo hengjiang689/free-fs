@@ -83,8 +83,11 @@ public class OssTemplate {
         PutObjectRequest putObjectRequest = new PutObjectRequest(fileProperties.getOss().getBucket(), pojo.getFileName(),file.getInputStream());
         putObjectRequest.setMetadata(metadata);
         ossClient.putObject(putObjectRequest);
-        String url = fileProperties.getOss().getPath() + CommonConstant.DIR_SPLIT + pojo.getFileName();
-        pojo.setUrl(url);
+        GeneratePresignedUrlRequest request = new GeneratePresignedUrlRequest(fileProperties.getOss().getBucket(),pojo.getFileName());
+        request.setExpiration(new Date(System.currentTimeMillis() + 3600L * 1000 * 24 * 365 * 10));
+//        ossClient.generatePresignedUrl(request);
+//        String url = fileProperties.getOss().getPath() + CommonConstant.DIR_SPLIT + pojo.getFileName();
+        pojo.setUrl(ossClient.generatePresignedUrl(request).toString());
         ossClient.shutdown();
         return pojo;
     }
