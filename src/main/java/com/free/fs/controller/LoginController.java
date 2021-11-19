@@ -99,9 +99,9 @@ public class LoginController extends BaseController {
         if (code == null || !sessionCode.equals(code.trim().toLowerCase())) {
             return R.failed("验证码不正确");
         }
-        if (userService.addUser(user)) {
-            return R.succeed("注册成功");
-        }
+//        if (userService.addUser(user)) {
+//            return R.succeed("注册成功");
+//        }
         return R.failed("注册失败");
     }
 }
